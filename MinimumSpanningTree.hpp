@@ -7,7 +7,7 @@
 #include "Graph.hpp"
 
 //
-// MinimumSpanningTree - Implements Janik-Prim's algorith to find the MST
+// MinimumSpanningTree - Implements Janik-Prim's algorithm to find the MST
 //
 class MinimumSpanningTree
 {
@@ -16,11 +16,11 @@ public:
 	//
 	// Description:
 	//
-	//		Prints the MST cost of a graph and the path associated with the MST
+	//		Prints the MST cost of a graph and the path of an MST
 	//
 	// Parameters:
 	//
-	//		Graph& graph -graph
+	//		Graph& graph - graph
 	//
 	//		int sourceVertex - source vertex
 	//

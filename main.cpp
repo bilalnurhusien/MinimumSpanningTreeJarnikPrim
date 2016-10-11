@@ -2,7 +2,6 @@
 //	Homework 2 - Implement Dijkstra's Algorithm and compute shortest paths between vertices in a graph
 //
 
-#include <assert.h>
 #include <iostream>
 #include "Graph.hpp"
 #include "MinimumSpanningTree.hpp"
