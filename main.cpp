@@ -1,5 +1,5 @@
 //
-//	Homework 3 - Implement Jarnik-Prim's Algorith to compute the MST of a graph
+//	Homework 3 - Implement Jarnik-Prim's Algorithm to compute the MST of a graph
 //
 #include <assert.h>
 #include <iostream>
