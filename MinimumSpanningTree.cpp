@@ -39,9 +39,12 @@ void MinimumSpanningTree::PrintMinimumSpanningTree(
 {
 	//
 	// Closed set contains all explored vertices
-	// Open set contains all unexplored vertics
 	//
 	std::vector<Vertex> closedSet;
+
+	//
+	// Open set contains all unexplored vertices
+	//
 	std::vector<Vertex> openSet;
 
 	//
@@ -79,7 +82,7 @@ void MinimumSpanningTree::PrintMinimumSpanningTree(
 	while (false == openSet.empty())
 	{
 		//
-		// Pop min value from min heap
+		// Get minimum edge value from open set min heap
 		//
 		std::pop_heap(openSet.begin(), openSet.end(), GreaterDistComp());
 
@@ -87,8 +90,14 @@ void MinimumSpanningTree::PrintMinimumSpanningTree(
 
 		openSet.pop_back();
 
+		//
+		// Add min edge value to closed set
+		//
 		closedSet.push_back(minPath);
 
+		//
+		// Update MST cost and path
+		//
 		mstCost += minPath.edge;
 
 		if (openSet.empty())
@@ -100,12 +109,18 @@ void MinimumSpanningTree::PrintMinimumSpanningTree(
 			mstPath = "|" +  mstPath + std::to_string(minPath.vertex) + "|" + " -> ";
 		}
 
+		//
+		// Get neigbhours of vertex
+		//
 		graph.GetNeighbours(minPath.vertex, neighbours);
 
+		//
+		// Flag used to know when to update the open set heap`
+		//
 		bool updateHeap = false;
 
 		//
-		// Iterate through neighbours and update the edge costs in the open set
+		// Iterate through neighbours and update the edge costs in the open set heap
 		//
 		for (int i = 0; i < neighbours.size(); ++i)
 		{
