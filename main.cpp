@@ -109,7 +109,7 @@ int main()
 
 	std::cout << graph3 << std::endl;
 
-	MinimumSpanningTree::PrintMinimumSpanningTree(graph3);
+	MinimumSpanningTree::PrintMinimumSpanningTree(graph3, 3);
 
 	std::cout << std::endl;
 

@@ -54,9 +54,12 @@ void MinimumSpanningTree::PrintMinimumSpanningTree(
 	//
 	// Set all other vertex edge cost to infinity
 	//
-	for (int i = 1; i < graph.GetNumberOfVertices(); ++i)
+	for (int i = 0; i < graph.GetNumberOfVertices(); ++i)
 	{
-		openSet.push_back({i, INFINITY_INT});
+		if (i != sourceVertex)
+		{
+			openSet.push_back({i, INFINITY_INT});
+		}
 	}
 
 	std::vector<int> neighbours;
